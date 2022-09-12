@@ -1,0 +1,80 @@
+
+.fixed-up {
+    position: absolute;
+    height: 5vh;
+    top: 1vh;
+
+    svg {
+        scale: 1.25;
+    }
+}
+
+.fixed-down {
+    position: absolute;
+    height: 5vh;
+    bottom: 1vh;
+
+    svg {
+        scale: 1.25;
+    }
+}
+
+.fixed-up, .fixed-down {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#menu-arrow-up {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition-duration: 1s;
+    transition-property: -webkit-transform;
+    animation-name: pulseReverse;
+    animation-duration: 1.5s;
+}
+
+#menu-arrow-down {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition-duration: 1s;
+    transition-property: -webkit-transform;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+}
+
+@keyframes pulseReverse {
+    0% {
+        transform: scale(1) rotate(-180deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(-180deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-180deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.vertical-timeline-element-icon {
+    // width: 20px !important;
+    // height: 20px !important;
+    // left: 10px !important;
+    // top: 10px !important;
+}

@@ -1,0 +1,27 @@
+
+.btn-custom {
+    background-color: var(--champagne-color);
+    border: 2px solid var(--lighter-brown-color);
+    border-radius: 30px;
+    box-shadow: var(--brown-color) 4px 4px 0 0;
+    color: var(--brown-color);
+    cursor: pointer;
+    display: inline-block;    
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+    &:hover {
+        background-color: #fff;
+    }
+
+    &:active {
+        box-shadow: #422800 2px 2px 0 0;
+        transform: translate(2px, 2px);
+    }
+}

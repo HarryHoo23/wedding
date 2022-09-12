@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import ReactFullpage from '@fullpage/react-fullpage'
+import Homepage from './pages/Homepage'
+import InfoPage from './pages/InfoPage'
+import TimelinePage from './pages/TimelinePage'
+import ContactPage from './pages/ContactPage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <ReactFullpage
+            scrollingSpeed={1000}
+            licenseKey={"zMccI0J!a3"}
+            normalScrollElements={'.timeline-container'}
+            fitToSection={true}
+            render={({ state, fullpageApi }) => {
+                return (
+                    <ReactFullpage.Wrapper>
+                        <div className="section">
+                            <Homepage number={0} />
+                        </div>
+
+                        <div className="section">
+                            <InfoPage number={1} />
+                        </div>
+
+                        <div className="section">
+                            <TimelinePage number={2} />
+                        </div>
+
+                        <div className="section">
+                            <ContactPage number={3} />
+                        </div>
+                    </ReactFullpage.Wrapper>
+                )
+            }}
+        />
+    )
 }
 
-export default App;
+export default App

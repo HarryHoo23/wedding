@@ -1,0 +1,143 @@
+:root {
+    --brown-color: #946c52;
+    --lighter-brown-color: #9f7866;
+    --pink-color: #e9ccba;
+    --dark-grey-color: #b3b3b3;
+    --grey-color: #d0c8bb;
+    --orange-color: #d0a781;
+    --champagne-color: #ddcab4;
+    --font-color: #2d2d2d;
+}
+
+body, html {
+    font-family: 'ZCOOL KuaiLe', cursive;    
+    color: var(--font-color);    
+}
+
+p {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.color-pink {
+    color: var(--pink-color);
+}
+
+.color-brown {
+    color: var(--brown-color);
+}
+
+.color-champ {
+    color: var(--champagne-color);
+}
+
+.color-orange {
+    color: var(--orange-color);
+}
+
+.font-small {
+    font-size: 14px;
+}
+
+.font-medium {
+    font-size: 16px;
+}
+
+.font-large {
+    font-size: 20px;
+}
+
+.wrapper {
+    height: 100vh;
+    padding: 10vh 2vw;
+}
+
+.page {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: var(--pink-color);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.3);
+}
+
+.married {
+    width: 75%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.home {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("../assets/wedding-bg.jpg")no-repeat center center / cover;
+    color: var(--pink-color);
+    text-align: center;
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        color: var(--orange-color);
+        position: relative;
+        margin-bottom: 3rem;
+
+        &::after {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: var(--orange-color);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.info {
+    background-color: var(--orange-color);
+    position: relative;
+
+    .photo-frame {    
+        img {
+            max-height: 400px;
+            object-fit: contain;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+        }
+    } 
+}
+
+.timeline {
+    background-color: var(--champagne-color);
+    position: relative;
+
+    .page {
+        color: var(--brown-color);
+    }
+
+    .timeline-container {
+        height: 70vh;
+        overflow: scroll;
+    }
+}
+
+.fp-watermark {
+    display: none;
+}
