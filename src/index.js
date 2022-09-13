@@ -4,6 +4,7 @@ import App from "./App";
 import { GlobalProvider } from "./context/globalContext";
 import "normalize.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 import "./sass/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

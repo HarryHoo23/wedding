@@ -10,7 +10,7 @@ const App = () => {
         <ReactFullpage
             scrollingSpeed={1000}
             licenseKey={"zMccI0J!a3"}
-            normalScrollElements={'.timeline-container, .contact'}
+            normalScrollElements={'.timeline-container, .contact, .info'}
             fitToSection={true}
             render={({ state, fullpageApi }) => {
                 return (

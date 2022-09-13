@@ -2,7 +2,7 @@ import React from 'react'
 import { useGlobalContext } from '../context/globalContext'
 import '../sass/moveSection.scss'
 
-const MoveSection = () => {
+const MoveSectionUp = () => {
     const { handleMoveUp } = useGlobalContext();
 
     return (
@@ -32,4 +32,4 @@ const MoveSection = () => {
     )
 }
 
-export default MoveSection
+export default MoveSectionUp;
