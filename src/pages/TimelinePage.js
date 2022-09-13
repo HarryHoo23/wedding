@@ -10,6 +10,7 @@ const TimelinePage = (props) => {
         <div className="timeline wrapper">
             <MoveSection />
             <GettingMarried />
+            <h3 className='text-center color-brown'>婚礼流程</h3>
             <div className="timeline-container">
                 <Timeline />
             </div>

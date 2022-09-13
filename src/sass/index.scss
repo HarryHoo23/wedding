@@ -60,7 +60,7 @@ h3 {
 
 .wrapper {
     height: 100vh;
-    padding: 10vh 2vw;
+    padding: 8vh 2vw;
 }
 
 .page {
@@ -112,12 +112,18 @@ h3 {
 .info {
     background-color: var(--orange-color);
     position: relative;
+    overflow: hidden;
+
+    .married {
+        width: 50%;
+    }
 
     .photo-frame {    
+        text-align: center;
+
         img {
-            max-height: 400px;
+            max-height: 30vh;
             object-fit: contain;
-            width: 100%;
             border-radius: 5px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
         }
@@ -128,6 +134,10 @@ h3 {
     background-color: var(--champagne-color);
     position: relative;
 
+    .married {
+        width: 60%;
+    }
+
     .page {
         color: var(--brown-color);
     }
@@ -135,6 +145,65 @@ h3 {
     .timeline-container {
         height: 70vh;
         overflow: scroll;
+    }
+}
+
+.contact {
+    background-color: var(--champagne-color);
+    overflow: auto;
+    padding: 5vh 2vw;
+    position: relative;
+
+    .show-btn {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .comment-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border: 2px solid #FBF7F4;
+        border-radius: 5px;
+        padding: 20px 5px;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .comment {
+        background-color: #FBF7F4;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .name {
+            background-color: #EED2CC;
+            padding: 8px 10px;
+        }
+
+        .content {
+            padding: 8px 10px;
+        }
+    }
+
+    .form-container {
+        padding: 10px 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .hide-btn {
+            background-color: #946c52;
+            color: #e0e0e0;
+        }
+
+        .submit-btn {
+            padding: 0 40px;
+        }
     }
 }
 
