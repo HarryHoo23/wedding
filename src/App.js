@@ -11,7 +11,7 @@ import song from './assets/you-are-the-reason.mp3';
 const App = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
     const player = useRef(null);
 
     useEffect(() => {
@@ -23,9 +23,7 @@ const App = () => {
         }
     }, []);
 
-    const onLeave = (index, destination, direction) => {
-        console.log(index.index);
-        console.log(destination.index)
+    const onLeave = (index, destination, direction) => {    
         if (index.index === 0 && destination.index === 1) {
             setIsVisible(true);
         }
