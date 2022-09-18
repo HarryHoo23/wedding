@@ -4,20 +4,23 @@ import Homepage from './pages/Homepage'
 import InfoPage from './pages/InfoPage'
 import TimelinePage from './pages/TimelinePage'
 import ContactPage from './pages/ContactPage'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Spinner } from 'react-bootstrap'
 import song from './assets/you-are-the-reason.mp3';
-import ReactAudioPlayer from 'react-audio-player'
 
 const App = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [isPlaying, setIsPlaying] = useState(true);
+    const player = useRef(null);
 
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);            
         }, 500);
+        if (player.current) {
+            player.current.play();
+        }
     }, []);
 
     const onLeave = (index, destination, direction) => {
@@ -26,6 +29,11 @@ const App = () => {
         if (index.index === 0 && destination.index === 1) {
             setIsVisible(true);
         }
+    }
+
+    const onPause = () => {
+        setIsPlaying(!isPlaying)
+        isPlaying ? player.current.pause() : player.current.play()        
     }
 
     if (isLoading) {
@@ -38,13 +46,14 @@ const App = () => {
 
     return (
         <>
-            <div className={`audio-cd ${isPlaying ? 'rotate' : ''}`} onClick={() => setIsPlaying(!isPlaying)}>
-                <ReactAudioPlayer
+            <div className={`audio-cd ${isPlaying ? 'rotate' : ''}`} onClick={onPause}>
+                <audio
                     className='react-play'
                     src={song}
+                    controls
                     autoPlay={true}
-                    loop={true}
-                    volume={0.5}
+                    loop={true}                    
+                    ref={player}
                 />
             </div>
             <ReactFullpage

@@ -86,14 +86,14 @@ h3 {
     height: 40px;
     background-image: url('../assets/cd.png');
     background-size: cover;
-    z-index: 20;
+    z-index: 20;    
 
     &.rotate {
         animation: rotation 2s infinite linear;
     }
 
     .react-play {
-        visibility: hidden;
+        visibility: hidden;                
     }
 }
 
@@ -173,6 +173,7 @@ h3 {
 .timeline {
     background-color: var(--champagne-color);
     position: relative;
+    overflow: hidden;
 
     .married {
         width: 60%;
@@ -185,6 +186,7 @@ h3 {
     .timeline-container {
         height: 70vh;
         overflow-y: scroll;
+        padding-bottom: 50px;
     }
 }
 
