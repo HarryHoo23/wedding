@@ -41,8 +41,7 @@ const App = () => {
             <div className={`audio-cd ${isPlaying ? 'rotate' : ''}`} onClick={() => setIsPlaying(!isPlaying)}>
                 <ReactAudioPlayer
                     className='react-play'
-                    src={song}                    
-                    onPause={}
+                    src={song}
                     autoPlay={true}
                     loop={true}
                     volume={0.5}
