@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const Comment = (props) => {
 
-    const { name, content, date } = props.comment;
+    const { name, content, createDate } = props.comment;
     
     const convertDate = (date) => {
         let newDate = moment(date).format('YYYY-MM-DD');
@@ -13,7 +13,7 @@ const Comment = (props) => {
     return (
         <div className="comment">
             <div className="name">
-                <h5>{name}, <span className="font-medium">发布时间：{convertDate(date)}</span></h5>
+                <h5>{name}, <span className="font-medium">发布时间：{convertDate(createDate)}</span></h5>
             </div>
             <div className="content">
                 <p>{content}</p>
